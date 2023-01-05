@@ -3,5 +3,9 @@
   "authors": "LittiNg",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.0",
+    "@commitlint/config-conventional": "^17.4.0"
+  }
 }
