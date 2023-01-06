@@ -1,0 +1,14 @@
+/* it converts pixels to rem */
+@function px-rem($pixels) {
+  $rem: 16 * 1px;
+
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @return $pixels / $rem * 1rem;
+}
+/* it returns some image from public folder */
+@function get-img($name, $file) {
+  @return "url(./images/" + $name + "." $file + ")";
+}

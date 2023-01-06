@@ -1,0 +1,59 @@
+/* ============================================ */
+/* Media Queries                                */
+/* ============================================ */
+
+ @mixin tablet {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+
+/* ============================================ */
+/* Size Selectors                               */
+/* ============================================ */
+
+@mixin padding($space) {
+  padding: map-get($spacing, $space);
+}
+
+@mixin margin($space) {
+  margin: map-get($spacing, $space);
+}
+
+@mixin font-size($size) {
+  font-size: map-get($fs, $size);
+}
+
+/* ============================================ */
+/* Styling                                      */
+/* ============================================ */
+
+@mixin texture-border($img) {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: get-img($img, "png");
+    
+    position: absolute;
+    top: -2px;
+    left: -2px;
+
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+  }
+}
+
