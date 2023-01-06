@@ -1,0 +1,13 @@
+@import "src/styles/tokens/all";
+
+.text {
+  margin: 0;
+  color: $primary-fern-500;
+}
+
+/* it select an value in the font-size array */
+@each $size, $value in $fs {
+  .text-#{$size} {
+      font-size: $value;
+  }
+}
