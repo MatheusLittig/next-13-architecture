@@ -1,6 +1,10 @@
+import { Text } from "@/components/common"
+
 function Home(){
 	return (
-		<h1>hello there</h1>
+		<>
+			<Text size="md">hello</Text>
+		</>
 	)
 }
 
